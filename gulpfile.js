@@ -9,7 +9,7 @@ gulp.task("icon-packager", function () {
 
   return gulp
     .src("src/svg/**/*.svg")
-    .pipe(iconPackager({ name, svgo: {} }))
+    .pipe(iconPackager({ name, svgo: { floatPrecision: 3 } }))
     .pipe(gulp.dest("dist"));
 });
 
